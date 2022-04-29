@@ -7,6 +7,28 @@
   font-family: 'TWKLausanne-150';
   src: url('./font/TWKLausanne-150.woff') format('woff');
 }
+/* loading */
+    .loader {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: fixed;
+      z-index: 99999999;
+    }
+
+    .loadingContainer {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -57%);
+      z-index: 1;
+      margin-left: 0.5rem;
+    }
+
+    .loadingContainer #loadingImg {
+      width: 100%;
+    }
 
 /* Animation */
 @keyframes envelop-top-movement {

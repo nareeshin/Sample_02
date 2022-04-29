@@ -1,0 +1,406 @@
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  src: url('./font/SpoqaHanSansNeo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'TWKLausanne-150';
+  src: url('./font/TWKLausanne-150.woff') format('woff');
+}
+
+/* Animation */
+@keyframes envelop-top-movement {
+	0% {
+	  transform: translateY(0vh);
+	}
+
+  7% {
+	  transform: translateY(0vh);
+	}
+
+	100% {
+	  transform: translateY(-100vh);
+	}
+}
+@keyframes envelop-bottom-movement {
+	0% {
+	  transform: translateY(0vh);
+	}
+
+  6% {
+	  transform: translateY(0vh);
+	}
+
+	100% {
+    position: fixed;
+	  transform: translateY(97vh);
+	}
+}
+
+
+/* 모바일 */
+/* Setting */
+    *{
+      margin: 0;
+      overflow-x: hidden;
+      box-sizing: border-box;
+    }
+    img {
+      vertical-align: middle;
+    }
+
+
+/* loading_content */
+    .loader {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: fixed;
+      z-index: 99999999;
+    }
+
+    .loadingImage {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -57%);
+      z-index: 99999999;
+    }
+
+/* loading_content end */
+
+    h1, h2, h3{
+      font-family: 'TWKLausanne-150', serif;
+    }
+
+    .mainPhoto{
+      width: 100%;
+    }
+
+
+    .nav_names{
+      position: fixed;
+      z-index: 500;
+      /* text-shadow: rgb(255, 255, 255) 1px 0 5px; */
+      top: 0;
+      width: 100%;
+    }
+
+    .text{
+      padding: 3%;
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+      text-align: center; 
+    }
+
+    .text_en{
+      font-family: 'TWKLausanne-150', sans-serif;
+      font-size: 3vw;
+      line-height: 2.7vw;
+    }
+
+    .text_kr{
+      font-family: 'SpoqaHanSansNeo', sans-serif;
+    }
+
+    .sec_greeting{
+      margin-top: 5%;
+      margin-bottom: 8%;
+    }
+
+    .sec_gallery{
+      font-size: 2rem;
+      margin: 0;
+      padding: 5%;
+      z-index: 999;
+    }
+
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    .hidden{
+      visibility: hidden;
+    }
+
+    .sec_dDay{
+      margin-top: 10%;
+      margin-bottom: 10%;
+    }
+
+/* Envelop - Cover */
+     .envelopeTop {
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      transform-origin: top;
+      z-index: 1000;
+      background-image: url(envelope_top.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      animation: envelop-top-movement 12s;
+      animation-fill-mode: forwards;
+    }
+
+     .envelopeBottom {
+      background-image: url(envelope_bottom.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      width: 100%;
+      height: 500%;
+      animation: envelop-bottom-movement 3s ease-in;
+      animation-fill-mode: forwards;
+      z-index: 9999;
+      transform-origin: top;
+      top: 0;
+      left: 0;
+    }
+
+/* Flower */
+.petal{
+  z-index: 1001;
+  position: absolute;
+  width: 25%;
+  top: 50%;
+  left: 50%;
+  transform: rotate(0deg);
+  transform: rotateX(0deg);
+  transform: rotateY(0deg);
+  transform: translate(-50%, -50%);
+  animation-fill-mode: forwards;
+  animation-duration: 5s;
+}
+    @keyframes petal-movement-01 {
+      from {
+        top: 50%;
+            }
+      to {
+        top: -20%;
+        left: 10%;
+        transform: rotate(180deg);
+      }
+    }
+
+    @keyframes petal-movement-02 {
+      from{
+        top: 50%;
+            }
+      to{
+        top: -20%; 
+        left: -50%;
+        transform: rotate(270deg);
+      }
+    }
+
+    @keyframes petal-movement-03 {
+      from {
+        top: 50%;
+            }
+      to {
+        top: -20%;
+        left: -25%;
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes petal-movement-04 {
+      from {
+        top: 50%;
+            }
+      to {
+        top: -20%;
+        left: 70%;
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes petal-movement-05 {
+      from {
+        top: 50%;
+      }
+      to {
+        top: -20%;
+        left: 90%;
+        transform: rotate(160deg);
+      }
+    }
+    @keyframes petal-movement-06 {
+      from {
+        top: 50%;
+      }
+      to {
+        top: -20%;
+        left: 99%;
+        transform: rotate(160deg);
+      }
+    }
+    @keyframes petal-movement-07 {
+      from {
+        top: 50%;
+      }
+      to {
+        top: -20%;
+        left: 100%;
+        transform: rotate(60deg);
+      }
+    }
+
+    .petal{
+      z-index: 1001;
+      position: absolute;
+      width: 25%;
+      top: 50%;
+      left: 50%;
+      transform: rotate(0deg);
+      transform: translate(-50%, -50%);
+      animation-fill-mode: forwards;
+      animation-duration: 5s;
+    }
+
+    .petal-01{
+      animation-name: petal-movement-01;
+    }
+    .petal-02{
+      animation-name: petal-movement-02;
+    }
+    .petal-03{
+      animation-name: petal-movement-03;
+      animation-duration: 3.5s;
+    }
+    .petal-04{
+      animation-name: petal-movement-04;
+      animation-duration: 3.5s;
+    }
+    .petal-05{
+      animation-name: petal-movement-05;
+    }
+    .petal-06{
+      animation-name: petal-movement-06;
+      animation-duration: 3.5s;
+    }
+    .petal-07{
+      animation-name: petal-movement-07;
+      animation-duration: 4s;
+    }
+
+
+
+/* Gallery Slide */
+  .gallery_container {
+    position: relative;
+  }
+  
+  .slides {
+    display: none;   /* Hide the images by default */
+    border: 1.5px solid black;
+  }
+  
+  .cursor {
+    cursor: pointer; /* Add a pointer when hovering over the thumbnail images */
+  }
+  
+  .prev,
+  .next { /* Next & previous buttons */
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    font-size: 5vh;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  .next { /* Position the "next button" to the right */
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover,
+  .next:hover {
+    color: white;
+  }
+  
+  .numbertext {
+    font-size: 2vh;
+    padding: 3%;
+    position: absolute;
+    top: 0;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+    border-radius: 50%;
+    border: 1.5px solid black;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .thumnails {
+    opacity: 0.5;
+  }
+  
+  .active,
+  .thumnails:hover {
+    opacity: 1;
+  }
+
+  /* Map */
+  #map{
+    margin-top: 10%;
+  }
+
+
+
+
+
+
+/* Web */
+@media (min-width: 769px) {
+  *{
+    overflow-x: hidden;
+  }
+
+body{
+    width: 769px;
+    height: 100vh;
+    align-content: center;
+    position: relative;
+    border: 5px solid black;
+    margin: auto;
+  }
+  
+  .nav_names{
+    width: 768px;
+    z-index: 9999;
+    cursor: pointer !important;
+  }
+  
+  @keyframes envelop-bottom-movement {
+    0% {
+      transform: translateY(0vh);
+    }
+  
+    6% {
+      transform: translateY(0vh);
+    }
+  
+    100% {
+      display: fixed;
+      transform: translateY(97vh);
+      visibility: hidden;
+    }
+  }
+
+}

@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
   <title>Sample-02</title>
-  <link rel="stylesheet" href="style.css?ver=1.5">
+  <link rel="stylesheet" href="style.css?ver=0.1">
 
 </head>
 <body>
@@ -14,7 +14,7 @@
 
 
 
-<div class="envelopeTop"></div>
+<div class="envelopeTop" id="envelopeTop"></div>
   
     <img src="./asset/names.svg" alt="names" class="nav_names" onClick="location.reload(true);">
     <img src="./asset/mainPhoto.jpg" alt="mainPhoto" class="mainPhoto">
@@ -140,39 +140,64 @@
 
 
 <div class="petal_container">
-  <img src="./asset/petal-01.png" alt="petal-01" class="petal petal-01">
-  <img src="./asset/petal-02.png" alt="petal-02" class="petal petal-02">
-  <img src="./asset/petal-03.png" alt="petal-03" class="petal petal-03">
-  <img src="./asset/petal-04.png" alt="petal-04" class="petal petal-04">
-  <img src="./asset/petal-05.png" alt="petal-05" class="petal petal-05">
-  <img src="./asset/petal-06.png" alt="petal-06" class="petal petal-06">
-  <img src="./asset/petal-07.png" alt="petal-07" class="petal petal-07">
-
+  <img src="./asset/petal-01.png" alt="petal-01" class="petal" id="petal01">
+  <img src="./asset/petal-02.png" alt="petal-02" class="petal" id="petal02">
+  <img src="./asset/petal-03.png" alt="petal-03" class="petal" id="petal03">
+  <img src="./asset/petal-04.png" alt="petal-04" class="petal" id="petal04">
+  <img src="./asset/petal-05.png" alt="petal-05" class="petal" id="petal05">
+  <img src="./asset/petal-06.png" alt="petal-06" class="petal" id="petal06">
+  <img src="./asset/petal-07.png" alt="petal-07" class="petal" id="petal07">
 </div>
-  <div class="envelopeBottom"></div>
+  <div class="envelopeBottom" id="envelopeBottom"></div>
+
+  <script>
+
+    const envelopeBottom = document.getElementById("envelopeBottom");
+    const envelopeTop = document.getElementById("envelopeTop");
+    const petal01 = document.getElementById("petal01")
+    const petal02 = document.getElementById("petal02")
+    const petal03 = document.getElementById("petal03")
+    const petal04 = document.getElementById("petal04")
+    const petal05 = document.getElementById("petal05")
+    const petal06 = document.getElementById("petal06")
+    const petal07 = document.getElementById("petal07")
+    envelopeBottom.addEventListener("click", function(e) {
+      e.preventDefault;
+
+      envelopeBottom.classList.add("envelopeBottom_animation");
+      envelopeTop.classList.add("envelopeTop_animation");
+      petal01.classList.add("petal-01")
+      petal02.classList.add("petal-02")
+      petal03.classList.add("petal-03")
+      petal04.classList.add("petal-04")
+      petal05.classList.add("petal-05")
+      petal06.classList.add("petal-06")
+      petal07.classList.add("petal-07")
+    }, false);
+  </script>
 
 
-<script src="script.js"></script>
-<script>
-        //nav_names
-      window.onscroll = function() {
-      myFunction()
-      };
+  <script src="script.js"></script>
+  <script>
+          //nav_names
+        window.onscroll = function() {
+        myFunction()
+        };
 
-      const gallery = document.getElementById("gallery");
-      const names = document.querySelector(".nav_names")
-      let sticky = gallery.offsetTop - 200;
+        const gallery = document.getElementById("gallery");
+        const names = document.querySelector(".nav_names")
+        let sticky = gallery.offsetTop - 200;
 
-      function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        // gallery.classList.add("sticky");
-        names.classList.add("hidden");
-      } else {
-        // gallery.classList.remove("sticky");
-        names.classList.remove("hidden");
-      }
-      }
-</script>
+        function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          // gallery.classList.add("sticky");
+          names.classList.add("hidden");
+        } else {
+          // gallery.classList.remove("sticky");
+          names.classList.remove("hidden");
+        }
+        }
+  </script>
 <!-- partial -->
 </body>
 </html>
